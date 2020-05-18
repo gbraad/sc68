@@ -30,9 +30,26 @@ LT_INIT([win32-dll])
 # | sc68                                                                 |
 # `----------------------------------------------------------------------'
 
-AC_SUBST([PACKAGE_SHORTDESC],["Atari ST and Amiga audio demuxer for vlc."])
+#AC_SUBST([PACKAGE_SHORTDESC],["Atari ST and Amiga audio demuxer for vlc."])
+#SC68_CC
+#AC_PROG_INSTALL
+
+SC68_PACKAGE(
+  [
+
+    Atari ST and Amiga audio demuxer for vlc.
+
+    sc68 for VideoLan player.
+
+  ])
+
 SC68_CC
 AC_PROG_INSTALL
+
+SC68_WITH_PACKAGE([libsc68],[libsc68],[sc68],[../libsc68],
+                  [sc68/sc68.h],[sc68_version],[req])
+
+SC68_WITH_SOURCE([file68],[file68],[../file68],[sc68/file68_vfs.h])
 
 # $$$ TEMP $$$
 AM_CONDITIONAL([SOURCE_SC68],[test 1 = 1])

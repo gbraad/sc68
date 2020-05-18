@@ -901,9 +901,10 @@ static int sndh_flags(hwflags68_t * hw, const char * b, int len)
     case 's': f |= SC68_DSP; break;
     case 't': f |= SC68_BLT; break;
     case 'h': f |= SC68_HBL; break;
-    case 'x': break;                    /* reserved for SFX */
-    case 'g': break;                    /* reserved for digital only */
-    case 'j': break;                    /* reserved for jingles */
+    case 'k': break;		/* not system friendly */
+    case 'x': break;		/* reserved for SFX */
+    case 'g': break;		/* reserved for digital only */
+    case 'j': break;		/* reserved for jingles */
     default:
       TRACE68(file68_cat,"file68: sndh -- unexpected FLAG '%c'\n", b[k]);
       assert(!"unexpected FLAG");
