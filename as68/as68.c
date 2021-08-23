@@ -69,7 +69,7 @@ int buffer_size = DEFAULT_CODE_BUFFER_SIZE;
 int pc, CurPC, max_pc, cur_rs, bss;
 volatile int org;
 int n_local, n_macro, cur_n_macro, n_label, n_equate;
-struct fast_table * opcode_table[], *register_table[];
+extern struct fast_table * opcode_table[], *register_table[];
 int size_table[] = { 1, 2, 4, 3 };
 int load_adr, run_adr, no_load;
 
